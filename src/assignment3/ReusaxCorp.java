@@ -75,9 +75,6 @@ public class ReusaxCorp {
     public int amountOfEmployees(){
         return employees.size();
     }
-<<<<<<< HEAD
-
-=======
     
     public void promoteToManager(String ID, String degree) {
     	
@@ -114,5 +111,4 @@ public class ReusaxCorp {
     	
     	employees.remove(employeeToPromote);
     }
->>>>>>> e2a3869c799a1bc86fc96ed3b87df851c9d5b167
 }
