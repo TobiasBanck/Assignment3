@@ -6,17 +6,17 @@ public class Employee {
     private double grossSalary;
     protected final double TAX_RATE = 0*1;
 
-    public Employee(String ID, String name, double salary){
+    public Employee(String ID, String name, double grossSalary){
         this.ID = ID;
         this.name = name;
-        this.grossSalary = salary;
+        this.grossSalary = grossSalary;
     }
     public void setName(String name){
         this.name = name;
     }
 
-    public void setGrossSalary(double salary){
-        this.grossSalary = salary;
+    public void setGrossSalary(double grossSalary){
+        this.grossSalary = grossSalary;
     }
 
     public String getID() {
