@@ -4,7 +4,7 @@ public class Employee {
     private String ID;
     private String name;
     private double grossSalary;
-    private final double TAX_RATE = 0*1;
+    protected final double TAX_RATE = 0*1;
 
     public Employee(String ID, String name, double salary){
         this.ID = ID;
