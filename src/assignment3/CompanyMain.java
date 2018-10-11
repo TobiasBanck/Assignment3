@@ -13,21 +13,22 @@ public class CompanyMain {
         final int SHOW_EMPLOYEE_AMOUNT = 7;
         final int QUIT = 8;
 
-        System.out.println("1) Register Employee");
-        System.out.println("2) Retrieve Employee info");
-        System.out.println("3) Update Employee info");
-        System.out.println("4) Remove Employee");
-        System.out.println("5) Show total gross salary cost");
-        System.out.println("6) Show total net salary cost");
-        System.out.println("7) Show amount of Employees");
-        System.out.println("8) quit");
-
         int option;
-        option = IO.nextInt("");
         do {
+            System.out.println("1) Register Employee");
+            System.out.println("2) Retrieve Employee info");
+            System.out.println("3) Update Employee info");
+            System.out.println("4) Remove Employee");
+            System.out.println("5) Show total gross salary cost");
+            System.out.println("6) Show total net salary cost");
+            System.out.println("7) Show amount of Employees");
+            System.out.println("8) quit");
+
             String ID;
             String name;
             double grossSalary;
+
+            option = IO.nextInt("");
             switch(option) {
                 case REGISTER_EMPLOYEEE:
                     ID = IO.nextLine("Enter ID");
@@ -61,7 +62,13 @@ public class CompanyMain {
                     break;
                 case RETRIEVE_EMPLOYEE:
                     ID = IO.nextLine("Enter ID");
-                    deanckInc.retrieveEmployee(ID);
+                    Employee retreivedEmployee = deanckInc.retrieveEmployee(ID);
+                    if (retreivedEmployee == null){
+                        System.out.println("No employee of ID " + ID + " found");
+                    }
+                    else{
+                        System.out.println(retreivedEmployee);
+                    }
                     break;
                 case UPDATE_EMPLOYEE:
                     int updateOption;
@@ -81,16 +88,22 @@ public class CompanyMain {
                     break;
                 case REMOVE_EMPLOYEE:
                     ID = IO.nextLine("Enter ID");
-                    deanckInc.removeEmployee(ID);
+                    Employee employeeToRemove = deanckInc.retrieveEmployee(ID);
+                    if (employeeToRemove == null){
+                        System.out.println("No employee of ID " + ID + " found");
+                    }
+                    else{
+                        deanckInc.removeEmployee(ID);
+                    }
                     break;
                 case SHOW_GROSS_SALARY:
-                    deanckInc.totalGrossSalary();
+                    System.out.println(deanckInc.totalGrossSalary());
                     break;
                 case SHOW_NET_SALARY:
-                    deanckInc.totalNetSalary();
+                    System.out.println(deanckInc.totalNetSalary());
                     break;
                 case SHOW_EMPLOYEE_AMOUNT:
-                    deanckInc.amountOfEmployees();
+                    System.out.println("There are " + deanckInc.amountOfEmployees() + " employees");
                     break;
                 case QUIT:
                     break;
