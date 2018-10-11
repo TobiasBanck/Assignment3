@@ -4,7 +4,7 @@ public class Director extends Manager {
 
 	private String department;// human resources, technical, or business
 	
-	public Director(String ID, String name, double salary, String department) {
+	public Director(String ID, String name, double salary, String degree, String department) {
 		
 		super(ID, name, salary, department);
 		
