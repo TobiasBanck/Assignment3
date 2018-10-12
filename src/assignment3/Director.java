@@ -1,6 +1,7 @@
 package assignment3;
 
 public class Director extends Manager {
+	
 	double directorBenefit;
 	private String department;// human resources, technical, or business
 	private final int LOWER_TAX_BRACKET = 30000;
@@ -47,5 +48,4 @@ public class Director extends Manager {
 		
 		return this.department;
 	}
-
 }

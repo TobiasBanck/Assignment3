@@ -5,7 +5,6 @@ public class Manager extends Employee {
 	private String degree; // BSc, MSc, or PhD
 	private double bonus; // 0.1, 0.2, 0.35, for BSc, MSc, and PhD, respectively
 	
-
 	public Manager(String ID, String name, double salary, String degree) {
 		
 		super(ID, name, salary);
@@ -24,6 +23,7 @@ public class Manager extends Employee {
 	}
 	
 	public double getGrossSalary() {
+		
 		if (this.degree.equals("MSc")){
 			this.bonus = 0.2;
 		}
@@ -43,6 +43,5 @@ public class Manager extends Employee {
 	public double getNetSalary() {
 
 		return (this.getGrossSalary() - (this.getGrossSalary() * TAX_RATE));
-		
 	}
 }
