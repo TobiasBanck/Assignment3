@@ -1,8 +1,7 @@
 package assignment3;
 
 public class Director extends Manager {
-
-	private double directorBenefit;
+	
 	private String department;// human resources, technical, or business
 	private final int LOWER_TAX_BRACKET = 30000;
 	private final int UPPER_TAX_BRACKET = 50000;
@@ -12,8 +11,8 @@ public class Director extends Manager {
 	public Director(String ID, String name, double salary, String degree, String department, double directorBenefit) {
 		
 		super(ID, name, salary, degree);
-		this.directorBenefit = directorBenefit;
-
+		ReusaxCorp.directorsBenefit = directorBenefit;
+		
 		this.department = department;
 	}
 
@@ -39,7 +38,7 @@ public class Director extends Manager {
 		
 		double grossSalary = 0;
 		
-		grossSalary = super.getGrossSalary() + this.directorBenefit;
+		grossSalary = super.getGrossSalary() + ReusaxCorp.directorsBenefit;
 		
 		return grossSalary;
 	}
@@ -47,9 +46,5 @@ public class Director extends Manager {
 	public String getDepartment() {
 		
 		return this.department;
-	}
-
-	public void setBenefit(double directorBenefit) {
-		this.directorBenefit = directorBenefit;
 	}
 }

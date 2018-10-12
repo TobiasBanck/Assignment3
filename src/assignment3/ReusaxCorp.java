@@ -4,28 +4,21 @@ import java.util.ArrayList;
 
 public class ReusaxCorp {
 
-    private double directorBenefit;
+    protected static double directorsBenefit;
     private ArrayList<Employee> employees;
 
-    public ReusaxCorp(double directorsBenefit) {
+    public ReusaxCorp() {
     	
         employees = new ArrayList<>();   // initializing employees arraylist
-        this.directorBenefit = directorsBenefit;
+        directorsBenefit = 5000;
     }
     public void setDirectorsBenefit(double benefit) {
-
-        this.directorBenefit = benefit;
-
-        for(Employee employee: employees){
-            if(employee instanceof Director){
-                ((Director) employee).setBenefit(benefit);
-            }
-        }
-
+    	
+        directorsBenefit = benefit;
     }
     public double getDirectorsBenefit() {
     	
-        return this.directorBenefit;
+        return directorsBenefit;
     }
 
     public void registerEmployee(String ID, String name, double grossSalary ) {
@@ -42,7 +35,7 @@ public class ReusaxCorp {
     
     public void registerDirector(String ID, String name, double grossSalary, String degree, String department) {
     	
-        Director newDirector = new Director(ID, name, grossSalary, degree, department, this.directorBenefit);
+        Director newDirector = new Director(ID, name, grossSalary, degree, department, directorsBenefit);
         employees.add(newDirector);
     }
     
