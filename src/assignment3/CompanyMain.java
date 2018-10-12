@@ -11,7 +11,8 @@ public class CompanyMain {
         final int SHOW_GROSS_SALARY = 5;
         final int SHOW_NET_SALARY = 6;
         final int SHOW_EMPLOYEE_AMOUNT = 7;
-        final int QUIT = 8;
+        final int PROMOTE_EMPLOYEE = 8;
+        final int QUIT = 9;
 
         int option;
         do {
@@ -105,10 +106,42 @@ public class CompanyMain {
                 case SHOW_EMPLOYEE_AMOUNT:
                     System.out.println("There are " + deanckInc.amountOfEmployees() + " employees");
                     break;
+                case PROMOTE_EMPLOYEE:
+                    ID = IO.nextLine("Enter ID");
+                    System.out.println("what do you want to promote to?");
+                    System.out.println("1) Regular employee");
+                    System.out.println("2) Intern");
+                    System.out.println("3) Manager");
+                    System.out.println("4) Director");
+
+                    int promotionType = IO.nextInt("");
+                    int GPA;
+                    String degree;
+                    String department;
+
+                    switch (promotionType){
+                        case 1:
+                            deanckInc.promoteToEmployee(ID);
+                            break;
+                        case 2:
+                            GPA = IO.nextInt("Enter GPA");
+                            deanckInc.promoteToIntern(ID,GPA);
+                            break;
+                        case 3:
+                            degree = IO.nextLine("Enter degree");
+                            deanckInc.promoteToManager(ID, degree );
+                            break;
+                        case 4:
+                            degree = IO.nextLine("Enter degree");
+                            department = IO.nextLine("Enter Department");
+                            deanckInc.promoteToDirector(ID, degree,department);
+                            break;
+                    }
+
                 case QUIT:
                     break;
             }
-        } while (option !=8);
+        } while (option !=QUIT);
 
 
     }
