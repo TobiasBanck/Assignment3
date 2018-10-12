@@ -1,17 +1,18 @@
 package assignment3;
 
 public class Director extends Manager {
-
+	double directorBenefit;
 	private String department;// human resources, technical, or business
 	
-	public Director(String ID, String name, double salary, String degree, String department) {
+	public Director(String ID, String name, double salary, String degree, String department, double directorBenefit) {
 		
 		super(ID, name, salary, department);
+		this.directorBenefit = directorBenefit;
 		
 		this.department = department;
 	}
-	
-	public double getNetSalary(double directorBenefit) { // directorBenefit bestämms av företaget så vet inte riktigt hur vi gör med det
+
+	public double getNetSalary() { // directorBenefit bestämms av företaget så vet inte riktigt hur vi gör med det
 		
 		double netSalary = 0;
 		if(super.getGrossSalary() < 30000) {
