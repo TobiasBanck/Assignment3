@@ -3,11 +3,19 @@ package assignment3;
 import java.util.ArrayList;
 
 public class ReusaxCorp {
-	
+
+    private double directorsBenefit;
     private ArrayList<Employee> employees;
 
-    public ReusaxCorp(){
+    public ReusaxCorp(double directorsBenefit){
         employees = new ArrayList<>();   // initializing employees arraylist
+        this.directorsBenefit = directorsBenefit;
+    }
+    public void setDirectorsBenefit(double benefit){
+        this.directorsBenefit = benefit;
+    }
+    public double getDirectorsBenefit(){
+        return this.directorsBenefit;
     }
 
     public void registerEmployee(String ID, String name, double grossSalary ){
@@ -16,13 +24,14 @@ public class ReusaxCorp {
     }
     
     public void registerManager(String ID, String name, double grossSalary, String degree){
+
         Manager newManager = new Manager(ID, name, grossSalary, degree);
         employees.add(newManager);
 
     }
     
     public void registerDirector(String ID, String name, double grossSalary, String degree, String department){
-        Director newDirector = new Director(ID, name, grossSalary, degree, department);
+        Director newDirector = new Director(ID, name, grossSalary, degree, department, this.directorsBenefit);
         employees.add(newDirector);
     }
     
