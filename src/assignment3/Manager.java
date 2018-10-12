@@ -10,7 +10,7 @@ public class Manager extends Employee {
 		
 		super(ID, name, salary);
 		
-		this.degree = degree; // inte säker hur vi ska sätta bonus eftersom vi inte borde ha logik i constructor
+		this.degree = degree;
 	}
 	
 	public String getDegree() {
@@ -24,11 +24,21 @@ public class Manager extends Employee {
 	}
 	
 	public double getGrossSalary() {
+		if (degree.equals("MSc")){
+			this.bonus = 0.2;
+		}
+		else if(degree.equals("PhD")){
+			this.bonus = 0.35;
+		}
+		else{
+			this.bonus = 0.1;       //Assuming every manager at least has a BSc, in case of spelling errors
+		}
 		
 		double total = super.getGrossSalary();
 		total += total * bonus;
 		
 		return total;
 	}
+
 
 }
