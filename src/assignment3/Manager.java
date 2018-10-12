@@ -24,14 +24,14 @@ public class Manager extends Employee {
 	}
 	
 	public double getGrossSalary() {
-		if (degree.equals("MSc")){
+		if (this.degree.equals("MSc")){
 			this.bonus = 0.2;
 		}
-		else if(degree.equals("PhD")){
+		else if(this.degree.equals("PhD")){
 			this.bonus = 0.35;
 		}
-		else{
-			this.bonus = 0.1;       //Assuming every manager at least has a BSc, in case of spelling errors
+		else if(this.degree.equals("BSc")){
+			this.bonus = 0.1;
 		}
 		
 		double total = super.getGrossSalary();
@@ -39,6 +39,10 @@ public class Manager extends Employee {
 		
 		return total;
 	}
+	
+	public double getNetSalary() {
 
-
+		return (this.getGrossSalary() - (this.getGrossSalary() * TAX_RATE));
+		
+	}
 }
