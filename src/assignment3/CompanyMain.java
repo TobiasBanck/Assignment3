@@ -2,7 +2,7 @@ package assignment3;
 public class CompanyMain {
     public static void main(String[] args) {
 
-        ReusaxCorp deanckInc = new ReusaxCorp(5000);
+        ReusaxCorp deanckInc = new ReusaxCorp();
 
         final int REGISTER_EMPLOYEEE = 1;
         final int RETRIEVE_EMPLOYEE = 2;
