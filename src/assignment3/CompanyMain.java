@@ -23,7 +23,8 @@ public class CompanyMain {
             System.out.println("5) Show total gross salary cost");
             System.out.println("6) Show total net salary cost");
             System.out.println("7) Show amount of Employees");
-            System.out.println("8) quit");
+            System.out.println("8) Promote Emmployee");
+            System.out.println("9) quit");
 
             String ID;
             String name;
