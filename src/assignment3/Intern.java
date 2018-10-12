@@ -34,7 +34,7 @@ public class Intern extends Employee {
 		return salary;
 	}
 	
-	public double getNextSalary() {
+	public double getNetSalary() {
 		
 		return getGrossSalary();
 	}
