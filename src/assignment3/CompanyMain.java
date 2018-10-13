@@ -149,7 +149,7 @@ public class CompanyMain {
 				break;
 				
 			case PRINT_ALL_EMPLOYEES:
-				System.out.println(deanckInc.printAllEmployees());
+				System.out.println(deanckInc.getAllEmployees());
 			}
 		} while (option != QUIT);
 	}

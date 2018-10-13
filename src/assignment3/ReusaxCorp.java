@@ -1,8 +1,6 @@
 package assignment3;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class ReusaxCorp {
 
@@ -135,7 +133,7 @@ public class ReusaxCorp {
     	employees.remove(employeeToPromote);
     }
     
-    public String printAllEmployees() {
+    public String getAllEmployees() {
     	
     	String output = "";
     	for(Employee employee : employees) {
@@ -145,12 +143,5 @@ public class ReusaxCorp {
     	}
     	
     	return output;
-    }
-    
-    public void sortEmployees() {
-    	
-    	printAllEmployees();
-    	employees.sort(Comparator.comparing(Employee::getName));
-    	printAllEmployees();
     }
 }
