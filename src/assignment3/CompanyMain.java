@@ -10,7 +10,8 @@ public class CompanyMain {
 	private final int SHOW_NET_SALARY = 6;
 	private final int SHOW_EMPLOYEE_AMOUNT = 7;
 	private final int PROMOTE_EMPLOYEE = 8;
-	private final int QUIT = 9;
+	private final int PRINT_ALL_EMPLOYEES = 9;
+	private final int QUIT = 10;
 
 	public CompanyMain() {
 
@@ -30,8 +31,9 @@ public class CompanyMain {
 			System.out.println("6) Show total net salary cost");
 			System.out.println("7) Show amount of Employees");
 			System.out.println("8) Promote Emmployee");
-			System.out.println("9) quit");
-
+			System.out.println("9) print all employees");
+			System.out.println("10) quit");
+			
 			String ID;
 			String name;
 			double grossSalary;
@@ -145,6 +147,9 @@ public class CompanyMain {
 
 			case QUIT:
 				break;
+				
+			case PRINT_ALL_EMPLOYEES:
+				System.out.println(deanckInc.printAllEmployees());
 			}
 		} while (option != QUIT);
 	}
