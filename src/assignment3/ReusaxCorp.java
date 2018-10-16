@@ -147,7 +147,7 @@ public class ReusaxCorp {
     }
     
     public void sortEmployees() {
-    	
-    	employees.sort(Comparator.comparing(Employee::getName));
+    	// sorts the list employees based on the return value of getName and getBaseSalary in case of tie
+    	employees.sort(Comparator.comparing(Employee::getName).thenComparing(Employee::getBaseSalary));
     }
 }

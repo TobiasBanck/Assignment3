@@ -13,6 +13,7 @@ public class Employee {
         this.name = name;
         this.grossSalary = grossSalary;
     }
+    
     public void setName(String name) {
     	
         this.name = name;
@@ -56,12 +57,9 @@ public class Employee {
         }
         return false;
     }
+    
     public String toString() {
     	
         return this.name + " gross salary is of: " + getGrossSalary() + " per month";
     }
-
-
-
-
 }
