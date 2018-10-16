@@ -30,16 +30,22 @@ public class Employee {
 
     public String getName() {
     	
-        return this.ID;
+        return this.name;
     }
 
     public double getGrossSalary() {
     	
         return this.grossSalary;
     }
+    
     public double getNetSalary() {
     	
         return this.grossSalary - (grossSalary*TAX_RATE);
+    }
+    
+    public double getBaseSalary() {
+    	
+    	return this.grossSalary;
     }
 
     public boolean equals(Object object) {

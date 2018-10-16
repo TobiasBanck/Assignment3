@@ -12,6 +12,7 @@ public class CompanyMain {
 	private final int PROMOTE_EMPLOYEE = 8;
 	private final int PRINT_ALL_EMPLOYEES = 9;
 	private final int QUIT = 10;
+	private final int SORT_EMPLOYEES = 11;
 
 	public CompanyMain() {
 
@@ -150,6 +151,9 @@ public class CompanyMain {
 				
 			case PRINT_ALL_EMPLOYEES:
 				System.out.println(deanckInc.getAllEmployees());
+				break;
+			case SORT_EMPLOYEES:
+				deanckInc.sortEmployees();
 			}
 		} while (option != QUIT);
 	}

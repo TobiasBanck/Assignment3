@@ -1,6 +1,7 @@
 package assignment3;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class ReusaxCorp {
 
@@ -143,5 +144,10 @@ public class ReusaxCorp {
     	}
     	
     	return output;
+    }
+    
+    public void sortEmployees() {
+    	
+    	employees.sort(Comparator.comparing(Employee::getName));
     }
 }
