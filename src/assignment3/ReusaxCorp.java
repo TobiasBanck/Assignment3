@@ -101,7 +101,7 @@ public class ReusaxCorp {
     	
     	Employee employeeToPromote = retrieveEmployee(ID);
     	
-    	registerManager(ID, employeeToPromote.getName(), employeeToPromote.getGrossSalary(), degree);
+    	registerManager(ID, employeeToPromote.getName(), employeeToPromote.getBaseSalary(), degree);
     	
     	employees.remove(employeeToPromote);
     }
@@ -110,7 +110,7 @@ public class ReusaxCorp {
     	
     	Employee employeeToPromote = retrieveEmployee(ID);
     	
-    	registerDirector(ID, employeeToPromote.getName(), employeeToPromote.getGrossSalary(), degree, department);
+    	registerDirector(ID, employeeToPromote.getName(), employeeToPromote.getBaseSalary(), degree, department);
     	
     	employees.remove(employeeToPromote);
     }
@@ -119,7 +119,7 @@ public class ReusaxCorp {
     	
 		Employee employeeToPromote = retrieveEmployee(ID);
     	
-    	registerIntern(ID, employeeToPromote.getName(), employeeToPromote.getGrossSalary(), gpa);
+    	registerIntern(ID, employeeToPromote.getName(), employeeToPromote.getBaseSalary(), gpa);
     	
     	employees.remove(employeeToPromote);
     }
@@ -128,7 +128,7 @@ public class ReusaxCorp {
     	
     	Employee employeeToPromote = retrieveEmployee(ID);
     	
-    	registerEmployee(ID, employeeToPromote.getName(), employeeToPromote.getGrossSalary());
+    	registerEmployee(ID, employeeToPromote.getName(), employeeToPromote.getBaseSalary());
     	
     	employees.remove(employeeToPromote);
     }
