@@ -59,7 +59,7 @@ public class Employee {
     }
     
     public String toString() {
-    	
-        return this.name + " gross salary is of: " + getGrossSalary() + " per month";
+    	String toString = this.name + " gross salary is of: " + getGrossSalary() + " per month";
+        return toString;
     }
 }
